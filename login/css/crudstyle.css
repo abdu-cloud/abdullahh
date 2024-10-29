@@ -1,0 +1,29 @@
+body{
+background-color: rgba(0, 0, 0, 0.747);
+}
+label{
+    color: #ed563b;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #ed563b;
+    padding-left: 10px;
+
+}
+input:hover{
+    box-shadow: 0px 0px 10px 0px #ed563b;
+}
+button.btnadd{
+    border: 2px solid #ed563b;
+    transition: .5s ease;
+    font-weight: 500;
+    color: white;
+}
+button.btnadd:hover{
+    background-color: #ed563b;
+    color: white;
+    transform: scale(1.2);
+}

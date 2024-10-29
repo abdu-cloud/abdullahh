@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+background-color: rgba(0, 0, 0, 0.747);
+font-family: "Bebas Neue", sans-serif;
+}
+
+label{
+    color: #ed563b;
+}
+.crud .head h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+.crud .crudNav a {
+    text-decoration: none;
+    padding: 1% 20%;
+    border-radius: 5px;
+    margin: 0 15px;
+    background-color: #ed563b;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    /* font-size: 18px; */
+    /* font-weight: 700; */
+}
+.crud .crudNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    color: #000;
+    padding: 10px 0;
+}
+
+
+
+input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #ed563b;
+    padding-left: 10px;
+
+}
+input:hover{
+    box-shadow: 0px 0px 10px 0px #ed563b;
+}
+button.btnadd{
+    border: 2px solid #ed563b;
+    transition: .5s ease;
+    font-weight: 500;
+    color: white;
+}
+button.btnadd:hover{
+    background-color: #ed563b;
+    color: white;
+    transform: scale(1.2);
+}

@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(rgba(0,0,0,0),
+    rgba(0,0,0,0)),url("../images/loginimage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+   
+}
+.login .container{
+    width: 90%;
+    margin: auto;
+  padding-top: 60px;
+ 
+}
+.login .container form{
+    width: 50%;
+    margin: auto;
+    border: 2px black solid;
+    padding: 4% 2%;
+    text-align: center;
+    background-color: black;
+    opacity: .8;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+.login .container form:hover{
+    box-shadow: 0px 0px 10px 5px #ed563b;
+}
+.login .container form h1{
+    margin-bottom: 10%;
+    font-size: 40px;
+    color: white;
+}
+.login .container form h1 span{
+    color: #ed563b;
+}
+form .input{
+  
+    width: 90%;
+    margin-bottom: 7%;
+    transition:.1s ease;
+}
+form .input input{
+    width: 80%;
+    height: 60px;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: 1px solid black;
+padding-left: 20px;
+outline: none;
+transition: .3s ease;
+   
+}
+form .input input:hover{
+    box-shadow: 0px 0px 10px 2px #ed563b;
+}
+form .submit input{
+    width: 40%;
+    margin-left:10% ;
+    border: none;
+    background-color: #ed563b;
+    color: white;
+height: 60px;
+    line-height: 40px;
+    font-size: 20px;
+    transition: .3s ease;
+}
+form .submit input:hover{
+    background-color: #f14a2dd5;
+ }
+ form .input:hover label{
+    top: 4%;
+opacity: 0;
+    border-radius: 10px;
+
+  }
+form input:hover{
+    border: none;
+    
+  border-radius: 12px;
+  }
+@media (max-width:420px) {
+.login .container form .content .submit input{
+        text-align: center;
+        font-size: 16px;
+    };
+.login .container form .content .input input{
+        height: 40px;
+    }
+
+  }

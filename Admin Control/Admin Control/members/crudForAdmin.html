@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/crudstyle.css" />
+  </head>
+  <body>
+    <div class="crud mt-5">
+      <div class="head ">
+          <h2 class="text-center">Control Panel</h2>
+          <div class="container">
+          <div class="crudNav mt-5 m-auto mt-5">
+              <a href="../products/Cruds_Products.html">Products</a>
+              <a href="../members/crudForAdmin.html">Memebers</a></div>
+          </div>
+      </div>
+    <section class="crud text-center>
+      <div class="container">
+       
+        <div class="w-50 m-auto mt-5 input">
+          <div class="w-100 mb-3">
+            <label for="UserName" class="mb-2 fs-6">User Name</label>
+            <input type="text" id="UserName" class="" />
+          </div>
+          <div class="w-100 mb-3">
+            <label for="UserEmail" class="mb-2 fs-5">UserEmail</label>
+            <input type="email" id="UserEmail" class="" />
+          </div>
+          <div class="w-100 mb-3">
+            <label for="Phone" class="mb-2 fs-5 t">Phone</label>
+            <input type="text" id="Phone" class="" />
+          </div>
+          <div class="w-100 mb-3">
+            <label for="Sessions" class="mb-2 fs-5"
+              >Number Of Gym Sessions</label
+            >
+            <input id="Sessions" class="" type="number"/>
+          </div>
+          <button
+            class="btn mb-5 mt-2 btnadd"
+            onclick="addUser()"
+            id="btnadd-update"
+          >
+            Add User
+          </button>
+
+          <div class="search m-atuo">
+            <input
+              type="text"
+              class="form-control mb-3"
+              placeholder="Search...."
+              id="searchinput"
+              onkeyup="searchUser(this.value)"
+            />
+          </div>
+</div>
+          <div class="tablesection w-75 m-auto">
+            <table class="table mt-5 text-center">
+              <thead class="thead border-0">
+                <th>Id</th>
+                <th>User Name</th>
+                <th>UserEmail</th>
+                <th>Phone</th>
+                <th>Number Of Gym Sessions</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </thead>
+              <tbody class="tbody" id="tablebody">
+                <tr>
+                  <td>0</td>
+                  <td>Moamen Mefreh</td>
+                  <td>moamen@gmil.com</td>
+                  <td>01124983545</td>
+                  <td class="text-center">20</td>
+                  <td>
+                    <button class="btn btn-outline-warning" onclick="Update(0)">
+                      Update
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-outline-danger"
+                      onclick="delete_user(0)"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/crud.js"></script>
+  </body>
+</html>

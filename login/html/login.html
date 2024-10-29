@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="container">
+          <form action="" onsubmit="event.preventDefault(); login();">
+              <h1><span>Log</span>In <span>Gym</span></h1>
+              <div class="content">
+                  <div class="input">
+                      <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Enter Your Email"
+                          required
+                      />
+                  </div>
+                  <div class="input">
+                      <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          placeholder="Enter Your Password"
+                          required
+                      />
+                  </div>
+              </div>
+              <div class="input submit">
+                  <button type="submit" id="btnlogin" class="submit">LogIn</button>
+              </div>
+              <div id="message"></div>
+          </form>
+      </div>
+  </section>
+    <script src="../javascript/authen.js"></script>
+  </body>
+</html>

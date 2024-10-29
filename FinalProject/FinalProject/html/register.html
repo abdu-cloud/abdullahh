@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registerion</title>
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <section class="register">
+      <div class="container">
+        <form action="">
+          <h1><span>Register</span> In <span>Gym</span></h1>
+          <div class="content">
+            <div class="input">
+              <input
+                type="text"
+                id="Full-Name"
+                name="fullname"
+                placeholder="Full name"
+              />
+            </div>
+            <div class="input">
+              <input type="email" id="emial" name="email" placeholder="Email" />
+            </div>
+            <div class="input">
+              <input type="text" id="Phone" name="Phone" placeholder="Phone" />
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="confirmpassword"
+                name="confirmpassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+
+            <div class="input">
+              <select name="Enter-Time-You-want-Traine">
+                <option selected="selected">Training Place</option>
+                <option value="Dokki">Dokki</option>
+                <option value="Maadi">Maadi</option>
+                <option value="Munib">Munib</option>
+                <option value="Fifth Settlement">Fifth Settlement</option>
+                <option value="Mokattam">Mokattam</option>
+                <option value="Minya">Minya</option>
+              </select>
+            </div>
+          </div>
+          <div class="gender">
+            <label for="gender" class="label-gender">Gender</label>
+            <div class="input-gender">
+              <div>
+                <input type="radio" name="gender" id="Male" value="Male" />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" name="gender" id="Fmale" value="FeMale" />
+                <label for="Fmale">Female</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input submit">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

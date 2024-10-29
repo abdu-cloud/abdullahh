@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل مستخدم جديد</title>
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <section class="register">
+      <div class="container">
+        <form action="" onsubmit="event.preventDefault(); register();">
+          <h1><span>Register</span> In <span>Gym</span></h1>
+          <div class="content">
+            <div class="input">
+              <input
+                type="text"
+                id="name"
+                name="fullname"
+                placeholder="Full name"
+              />
+            </div>
+            <div class="input">
+              <input type="email" id="email" name="email" placeholder="Email" />
+            </div>
+            <div class="input">
+              <input type="text" id="phone" name="phone" placeholder="Phone" />
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                id="confirmpassword"
+                name="confirmpassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <div class="input" id="traine-place">
+              <select name="Enter-Time-You-want-Traine" required>
+                <option selected="selected" value="">Training Place</option>
+                <option value="Dokki">Dokki</option>
+                <option value="Maadi">Maadi</option>
+                <option value="Munib">Munib</option>
+                <option value="Fifth Settlement">Fifth Settlement</option>
+                <option value="Mokattam">Mokattam</option>
+                <option value="Minya">Minya</option>
+              </select>
+            </div>
+            <div class="gender">
+              <label for="gender" class="label-gender">Gender</label>
+              <div class="input-gender">
+                <div>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="Male"
+                    value="Male"
+                    required
+                  />
+                  <label for="Male">Male</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="Female"
+                    value="Female"
+                    required
+                  />
+                  <label for="Female">Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="input submit">
+              <button type="submit" class="submit">Register</button>
+            </div>
+            <div class="message" id="message"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="../javascript/authen.js"></script>
+  </body>
+</html>

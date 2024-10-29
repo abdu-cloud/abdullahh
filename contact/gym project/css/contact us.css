@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.header{
+    /* background:linear-gradient(to right top,rgba(90, 20, 76, 0.8),rgba(105, 19, 10, 0.7)), url("../images/contact/contact2.jpg"); */
+    background-image: url("../images/contact/about-breadcrumb-bg.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    height: 250px;
+    color: white;
+}
+.header .title{
+    font-size:35px ;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.contact{
+   overflow: hidden;
+   margin-top: 50px;
+   padding:0 20px;
+}
+.contact .map{
+    position:relative;
+    width: 50%;
+    float: left;
+    padding-top: 10px;
+}
+.contact .map iframe{
+    border: 2px solid rgba(56, 55, 55, 0.038);
+    box-shadow: 10 px rgba(255, 255, 255, 0.558);
+}
+.contact .contact-info{
+    float: right;
+    width: 50%;
+}
+.contact-info .contact-content{
+    text-align: center;
+    align-items: center;
+}
+.contact-content i{
+    font-size: 35px;
+    color: #ed563b;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.contact-content p{
+    color: #454444;
+    font-size: 20px;
+}
+.contact-content p span{
+    color: #ed563b;
+}
+hr{
+    border: 1px solid #ed563b;
+    width: 60%;
+}
+.contactus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/contact/contact1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+}
+.contact-form{
+    width: 550px;
+    height: 510px;
+    background-color: #ed563b;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 40px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0  10px rgba(255,255,255,0.2);
+}
+.contact-form h1{
+    font-size: 35px;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.contact-form h3{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+.contact-form .input-form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-form input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    font-size: 20px;
+    color:#fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-form textarea{
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    color:#fff;
+    padding: 20px 45px 20px 20px;
+    
+}
+.input-form input::placeholder{
+    color:#fff;
+}
+.input-form i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input-form i:hover{
+    color: #ed563b;
+}
+.contact-form .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.contact-form .btn:hover{
+    background: rgba(255, 255, 255, 0.185);
+    color: #ffffff49;
+    border-color: #fff;
+}
+
+/* fotor*/
+
+.footer-area {
+    position: relative;
+    background-color: #ed563b;
+    color: #f9f7f6;
+    padding: 40px 0;
+    font-size: 25px;
+    height: 120px;
+    font-family: "Anton", sans-serif;
+    margin: -4px 0;
+  }
+  .text-center {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+
+
