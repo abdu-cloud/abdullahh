@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <section class="pricing">
+        <div class="pricing-header">
+            <h2>pricing table</h2>
+            <ul class="hr">
+                <li class="one"></li>
+                <li class="two"></li>
+                <li class="three"></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="pricing-content">
+                <!-- Day Pass Plan -->
+                <div class="pricing-item tb-effect">
+                    <div class="pricing-item-price">
+                        <h3 class="month" data-en="day pass" data-ar="مرور يومي">day pass</h3>
+                        <h3 class="dollar">50 egp</h3>
+                    </div>
+                    <ul class="pricing-item-list">
+                        <li><i class="active fa-solid fa-check"></i> experienced team</li>
+                        <li><i class="active fa-solid fa-check"></i> 20 trainings</li>
+                        <li><i class="inactive fa-solid fa-check"></i> 5 days per week</li>
+                        <li><i class="inactive fa-solid fa-check"></i> free shower & lockers</li>
+                        <li><i class="inactive fa-solid fa-check"></i> free parking</li>
+                        <li><i class="inactive fa-solid fa-check"></i> nutrition program</li>
+                    </ul>
+                    <a class="pricing-item-purchase" id="day-pass" data-plan="Day Pass" data-price="50 EGP" href="#">get plan</a>
+                </div>
+                
+                <!-- Monthly Plan -->
+                <div class="pricing-item tb-effect">
+                    <div class="pricing-item-price">
+                        <h3 class="month" data-en="monthly" data-ar="شهري">monthly</h3>
+                        <h3 class="dollar">1000 egp</h3>
+                    </div>
+                    <ul class="pricing-item-list">
+                        <li><i class="active fa-solid fa-check"></i> experienced team</li>
+                        <li><i class="active fa-solid fa-check"></i> 20 trainings</li>
+                        <li><i class="active fa-solid fa-check"></i> 5 days per week</li>
+                        <li><i class="active fa-solid fa-check"></i> free shower & lockers</li>
+                        <li><i class="inactive fa-solid fa-check"></i> free parking</li>
+                        <li><i class="inactive fa-solid fa-check"></i> nutrition program</li>
+                    </ul>
+                    <a class="pricing-item-purchase" id="monthly" data-plan="Monthly" data-price="1000 EGP" href="#">get plan</a>
+                </div>
+
+                <!-- Semi-Annual Plan -->
+                <div class="pricing-item tb-effect">
+                    <div class="pricing-item-price">
+                        <h3 class="month" data-en="semi annual" data-ar="نصف سنوي">semi annual</h3>
+                        <h3 class="dollar">5000 egp</h3>
+                    </div>
+                    <ul class="pricing-item-list">
+                        <li><i class="active fa-solid fa-check"></i> experienced team</li>
+                        <li><i class="active fa-solid fa-check"></i> 20 trainings</li>
+                        <li><i class="active fa-solid fa-check"></i> 5 days per week</li>
+                        <li><i class="active fa-solid fa-check"></i> free shower & lockers</li>
+                        <li><i class="active fa-solid fa-check"></i> free parking</li>
+                        <li><i class="inactive fa-solid fa-check"></i> nutrition program</li>
+                    </ul>
+                    <a class="pricing-item-purchase" id="semi-annual" data-plan="Semi Annual" data-price="5000 EGP" href="#">get plan</a>
+                </div>
+
+                <!-- Annual Plan -->
+                <div class="pricing-item recommended tb-effect">
+                    <div class="pricing-item-price">
+                        <h3 class="month" data-en="annual" data-ar="سنوي">annual</h3>
+                        <h3 class="dollar">9000 egp</h3>
+                    </div>
+                    <ul class="pricing-item-list">
+                        <li><i class="active fa-solid fa-check"></i> experienced team</li>
+                        <li><i class="active fa-solid fa-check"></i> 20 trainings</li>
+                        <li><i class="active fa-solid fa-check"></i> 5 days per week</li>
+                        <li><i class="active fa-solid fa-check"></i> free shower & lockers</li>
+                        <li><i class="active fa-solid fa-check"></i> free parking</li>
+                        <li><i class="active fa-solid fa-check"></i> nutrition program</li>
+                    </ul>
+                    <a class="pricing-item-purchase" id="annual" data-plan="Annual" data-price="9000 EGP" href="#">get plan</a>
+                    <div class="box">
+                        <div class="ribbon"><span>recommended</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add event listeners to all "Get Plan" buttons
+        document.querySelectorAll('.pricing-item-purchase').forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Get the plan details from the button's data attributes
+                const plan = this.getAttribute('data-plan');
+                const price = this.getAttribute('data-price');
+
+                // Store the selected plan in localStorage
+                localStorage.setItem('selectedPlan', plan);
+                localStorage.setItem('selectedPrice', price);
+
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html';
+            });
+        });
+    </script>
+</body>
+                    <!-- ***** Footer Start ***** -->
+                    <footer class="footer-area">
+                        <div class="container">
+                        
+                            <div class="col-12 text-center">
+                            <p id="animated-text"> <span data-en=" 2024 Gym Studio. All rights reserved." data-er="2024 جيم ستوديو. جميع الحقوق محفوظة.">&copy; 2024 Gym Studio. All rights reserved.</span> </p>
+                            
+                        </div>
+                        </div>
+                    </footer>
+                    <!-- ***** Footer End ***** -->
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .checkout-form {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-confirm {
+            background-color: #ed563b;
+            color: white;
+        }
+        .btn-confirm:hover {
+            background-color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="checkout-form">
+                <h2 class="text-center">Checkout</h2>
+                <form id="checkoutForm">
+                    <!-- Display the Selected Plan -->
+                    <div class="form-group">
+                        <label for="selectedPlan" data-en="Selected Plan" data-ar="الخطة المختارة">Selected Plan</label>
+                        <input type="text" class="form-control" id="selectedPlan" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName" data-en="Selected Plan" data-ar="الاسم بالكامل">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber" data-en="Selected Plan" data-ar="رقم الهاتف">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress" data-en="Selected Plan" data-ar="الايميل">Email Address</label>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="Enter email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" data-en="Selected Plan" data-ar="العنوان">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter address" required>
+                    </div>
+                    <button type="submit" class="btn btn-confirm btn-block" data-en="Selected Plan" data-ar="تأكيد" >Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Retrieve the selected plan from localStorage and display it
+    document.addEventListener('DOMContentLoaded', function() {
+        const selectedPlan = localStorage.getItem('selectedPlan');
+        if (selectedPlan) {
+            document.getElementById('selectedPlan').value = selectedPlan;
+        } else {
+            document.getElementById('selectedPlan').value = 'No plan selected';
+        }
+    });
+
+    // Handle form submission and store data in localStorage
+    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form data
+        const fullName = document.getElementById('fullName').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const emailAddress = document.getElementById('emailAddress').value;
+        const address = document.getElementById('address').value;
+        const selectedPlan = document.getElementById('selectedPlan').value;
+
+        // Store data in localStorage
+        localStorage.setItem('fullName', fullName);
+        localStorage.setItem('phoneNumber', phoneNumber);
+        localStorage.setItem('emailAddress', emailAddress);
+        localStorage.setItem('address', address);
+        localStorage.setItem('selectedPlan', selectedPlan);
+
+        // After storing data, redirect to the confirmation page
+        window.location.href = 'confirmation.html';
+    });
+</script>
+
+</body>
+</html>

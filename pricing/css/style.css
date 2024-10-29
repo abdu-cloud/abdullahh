@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* start pricing page */
+ .pricing{
+    padding: 50px 0;
+    background-image: url(../images/gymbackground3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+} 
+
+.pricing-header{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pricing-header h2{
+    color: #fff;
+    font-size: 50px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+.hr .one, .three{
+    list-style: none;
+    border-bottom: 2px solid #ed563b;
+    width: 80px;
+    margin: 0 auto;
+    padding-top: 4px ;
+}
+ .hr .two{
+    list-style: none;
+    border-bottom: 2px solid #ed563b;
+    width: 130px;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+
+.pricing-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.pricing-item {
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    padding: 50px ;
+    background-color: transparent;
+    border: solid 2px transparent  ;
+    box-shadow: 0 0 10px #ed563b;
+    margin: 0 20px;
+    transition: all 0.5s ease ;
+    text-wrap: nowrap;
+    
+}
+.pricing-item-price{
+    font-family: "Bebas Neue", sans-serif;
+    width: 75%;
+    height: 170px;
+    border: solid 2px transparent  ;
+    box-shadow: 0 0 10px #ed563b;
+    border-radius: 50%;
+    margin: auto  ;
+    padding: 60px 0;
+    white-space: nowrap;
+    transition: all 0.5s ease ;
+}
+.pricing-item-price .dollar {
+    font-size: 150%;
+    text-wrap: wrap;
+    word-break: break-word;
+    
+}
+.pricing-item-price .month{
+    font-size: 25px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    word-break: break-word;
+
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);
+    border: solid 2px #ed563b  ;
+}
+.pricing-item:hover .pricing-item-price{
+    border: solid 2px #ed563b  ;
+}
+
+
+
+.pricing-item-list{
+    list-style: none;
+    text-align: left;
+    /* font-family: "Fira Sans", sans-serif; */
+    line-height: 1.6;
+    font-size: 18px;
+    margin-block: 30px;
+}
+.pricing-item-list i.active{
+    color: green;
+}
+
+.pricing-item-list i.inactive{
+    color: #777;
+}
+
+.pricing-item-purchase {
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    background: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    border: #ed563b 2px transparent;
+    box-shadow: 0 0 5px #ed563b;
+    color: #ed563b;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    transition: all 0.2s ease ;
+}
+.pricing-item:hover .pricing-item-purchase{
+    border: solid 2px #ed563b  ;
+}
+
+.pricing-item-purchase:hover{
+    border: solid 1px #ed563b  ;
+    background-color: #fff;
+
+}
+
+
+.recommended{
+    position: relative;
+}
+
+  .ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 90px; height: 90px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 9px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #79A70A;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #79A70A;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+
+  .tb-effect{
+    position: relative;
+
+}
+
+.tb-effect::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    height: 0;
+    z-index: -1;
+    transition: height 0.3s;
+}
+.tb-effect:hover:after{
+    height: 100%;
+    z-index: -1;                      
+}
+
+/* responsive design pricing*/
+
+@media (max-width: 1200px) {
+   
+    .pricing-item {
+        width: 40%; 
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    /* For tablets and smaller laptops */
+    .pricing-item {
+        width: 45%; 
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For smaller tablets */
+    .pricing-item {
+        width: 90%; 
+        margin: 20px auto; 
+    }
+    
+    .pricing-header h2 {
+        font-size: 40px; 
+    }
+    
+    .pricing-item-price {
+        width: 85%; 
+        height: 150px; 
+        padding: 40px 0;
+    }
+
+    .pricing-item-list {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 576px) {
+    /* For mobile devices */
+    .pricing-item {
+        width: 100%; 
+        margin: 10px auto; 
+    }
+    
+    .pricing-item-price {
+        width: 80%; 
+        height: 130px; 
+        padding: 30px 0;
+    }
+    
+    .pricing-item-purchase {
+        font-size: 24px; 
+        padding: 6px 10px; 
+    }
+
+    .pricing-header h2 {
+        font-size: 35px; 
+    }
+    
+    .footer-area {
+        font-size: 20px;
+        padding: 20px 0; 
+    }
+}
+
+/* end pricing page */
+
+/* fotor*/
+
+.footer-area {
+    position: relative;
+    background-color: #e73c11;
+    color: #d1cbc8;
+    padding: 40px 0;
+    font-size: 25px;
+    height: 120px;
+    font-family: "Anton", sans-serif;
+    margin: -4px 0;
+  }
+  .text-center {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+
